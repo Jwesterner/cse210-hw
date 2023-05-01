@@ -6,12 +6,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Declare objects.
+        // Declare instances.
         Job job1 = new Job();
         Job job2 = new Job();
         Resume resume = new Resume();
 
-        // Add information to Job objects.
+        // Add information to Job instances.
         job1._company = "Microsoft";
         job1._jobTitle = "Software Engineer";
         job1._startYear = 2019;
@@ -22,7 +22,7 @@ class Program
         job2._startYear = 2022;
         job2._endYear = 2023;
 
-        // Add information to resume object.
+        // Add information to resume instance.
         resume._name = "Jack West";
         resume._jobs.Add(job1);
         resume._jobs.Add(job2);
