@@ -20,7 +20,7 @@ namespace Develop02 {
             Console.WriteLine("Welcome to the Journal Program!");
             do {
                 Console.WriteLine("Please select on of the following choices");
-                Console.WriteLine("1) Write\n2) Display\n3) Load\n4) Save\n5) Quit\n");
+                Console.WriteLine("1) Write\n2) Display\n3) Load\n4) Save\n5) Quit");
                 choice = Convert.ToInt16(Console.ReadLine());
 
                 if (choice == 1) {
@@ -42,13 +42,13 @@ namespace Develop02 {
                 }
 
                 if (choice == 3) {
-                    Console.WriteLine("Enter the name of the file you would like to load: ");
+                    Console.WriteLine("\nEnter the name of the file you would like to load: ");
                     file = Console.ReadLine();
                     ds.LoadFile(file, journal);
                 }
 
                 if (choice == 4) {
-                    Console.WriteLine("Enter the name of the file you would like to save to: ");
+                    Console.WriteLine("\nEnter the name of the file you would like to save to: ");
                     file = Console.ReadLine();
                     ds.SaveToFile(file, journal.GetAllEntries());
                 }
