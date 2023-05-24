@@ -5,7 +5,25 @@ class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Develop03 World!");
+            Scriptures scripture = new Scriptures();
+
+            int index = scripture.GetRandomIndex();
+            bool quit = false;
+
+            TargetPhrase phrase = new TargetPhrase(scripture.GetRef(index), scripture.GetVerse(index));
+
+            while (!quit) {
+            Console.Clear();
+            Console.WriteLine("Tap Enter to erase more words, type quit to exit.");
+            Console.WriteLine(phrase.GetModifiedVerse());
+            if (Console.ReadLine() == "quit") {
+                quit = true;
+            }
+            else {
+                phrase.HideWords(10);
+            }
+            }
+
         }
     }
 }
