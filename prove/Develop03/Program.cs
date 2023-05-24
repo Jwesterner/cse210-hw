@@ -15,6 +15,7 @@ class Program
             while (!quit) {
             Console.Clear();
             Console.WriteLine("Tap Enter to erase more words, type quit to exit.");
+            Console.WriteLine(scripture.GetRef(index));
             Console.WriteLine(phrase.GetModifiedVerse());
             if (Console.ReadLine() == "quit") {
                 quit = true;
