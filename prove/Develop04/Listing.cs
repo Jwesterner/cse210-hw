@@ -27,6 +27,7 @@ namespace Develop04 {
             Console.Write(_prompts[rndIndex] + " ");
         }
 
+        // An asynchronous task method that counts down the time.
         private Task TimerEnd() {
             int _timeleft = base.GetTime();
             Thread.Sleep(_timeleft*1000);
@@ -34,6 +35,7 @@ namespace Develop04 {
             return Task.CompletedTask;
         }
 
+        // Method used as a seperate input Thread.
         private void UserInputThread() {
             while (_running) {
                 string userInput = Console.ReadLine();
@@ -41,7 +43,9 @@ namespace Develop04 {
             }
         }
 
+
         public override async void Start() {
+            // Initialize new thread.
             Thread inputThread = new Thread(UserInputThread);
 
             DisplayRandomPrompt();
@@ -52,13 +56,18 @@ namespace Develop04 {
             }
             Console.WriteLine();
 
+            // Begin writing to new thread, continues during asynchronous method.
             inputThread.Start();
 
+            // Begin asynchronous task.
             await TimerEnd();
 
+            // After asynchronous task is completed, execute print statements.
             Console.WriteLine();
             Console.WriteLine($"You listed {_listCounter} items.");
             Console.WriteLine("Tap Enter to Continue.");
+
+            // Block inputThread from further use.
             inputThread.Join();
         }
     }
