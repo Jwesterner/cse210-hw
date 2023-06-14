@@ -60,6 +60,6 @@ namespace Develop04 {
             Console.WriteLine("\n");
         }
 
-        public abstract void Timer();
+        public abstract void Start();
     }
 }

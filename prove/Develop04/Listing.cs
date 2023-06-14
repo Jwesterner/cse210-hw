@@ -41,7 +41,7 @@ namespace Develop04 {
             }
         }
 
-        public override async void Timer() {
+        public override async void Start() {
             Thread inputThread = new Thread(UserInputThread);
 
             DisplayRandomPrompt();

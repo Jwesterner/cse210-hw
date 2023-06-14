@@ -41,7 +41,7 @@ namespace Develop04 {
             Console.WriteLine(_questions[rndIndex]);
         }
 
-        public override void Timer() {
+        public override void Start() {
             double timeLeft = base.GetTime();
             string[] animation = base.GetAnimationString();
 

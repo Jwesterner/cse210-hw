@@ -14,7 +14,7 @@ namespace Develop04 {
         base.SetStartMsg("This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
         }
 
-        public override void Timer() {
+        public override void Start() {
             int timeLeft = base.GetTime();
             int cycle = 0;
 

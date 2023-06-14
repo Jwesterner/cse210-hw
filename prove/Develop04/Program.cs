@@ -27,7 +27,7 @@ namespace Develop04 {
                         breathing.SetTime(time);
 
                         breathing.BeginPrep();
-                        breathing.Timer();
+                        breathing.Start();
                         choice = 0;
                         break;
                     case 2:
@@ -36,7 +36,7 @@ namespace Develop04 {
                         listing.SetTime(time);
 
                         listing.BeginPrep();
-                        listing.Timer();
+                        listing.Start();
                         choice = 0;
                         break;
                     case 3:
@@ -45,7 +45,7 @@ namespace Develop04 {
                         reflection.SetTime(time);
 
                         reflection.BeginPrep();
-                        reflection.Timer();
+                        reflection.Start();
                         choice = 0;
                         break;
                     case 4:
