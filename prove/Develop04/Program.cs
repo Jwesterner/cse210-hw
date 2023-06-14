@@ -10,48 +10,48 @@ namespace Develop04 {
             Listing listing = new Listing();
             Reflection reflection = new Reflection();
 
-            int choice = 0;
+            string choice = "0";
             int time;
 
-            while (choice == 0) {
+            while (choice == "0") {
                 Console.WriteLine("\nWelome to the Mindulness Program");
                 Console.WriteLine("Please choose from one of the activities below: ");
                 Console.WriteLine("1. Breathing Activity\n2. Listing Activity\n3. Reflection Activity\n4. Quit");
                 
-                choice = int.Parse(Console.ReadLine());
+                choice = Console.ReadLine();
 
                 switch (choice) {
-                    case 1:
+                    case "1":
                         breathing.DisplayStartMsg();
                         time = Convert.ToInt16(Console.ReadLine());
                         breathing.SetTime(time);
 
                         breathing.BeginPrep();
                         breathing.Start();
-                        choice = 0;
+                        choice = "0";
                         break;
-                    case 2:
+                    case "2":
                         listing.DisplayStartMsg();
                         time = Convert.ToInt16(Console.ReadLine());
                         listing.SetTime(time);
 
                         listing.BeginPrep();
                         listing.Start();
-                        choice = 0;
+                        choice = "0";
                         break;
-                    case 3:
+                    case "3":
                         reflection.DisplayStartMsg();
                         time = Convert.ToInt16(Console.ReadLine());
                         reflection.SetTime(time);
 
                         reflection.BeginPrep();
                         reflection.Start();
-                        choice = 0;
+                        choice = "0";
                         break;
-                    case 4:
+                    case "4":
                         break;
                     default:
-                        choice = 0;
+                        choice = "0";
                         break;
 
                 }
